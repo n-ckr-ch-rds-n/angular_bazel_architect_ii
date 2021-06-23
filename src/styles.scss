@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  margin: 0;
+}
+
+.freewall {
+  font-family: "Roboto", "Arial Narrow", Arial, sans-serif;
+
+  button {
+    border-radius: 0 !important;
+    box-shadow: 0 3px 20px rgba(0,0,0,.15) !important;
+    font-weight: 400;
+    transition: ease-in-out 200ms;
+  }
+
+  button:hover {
+    box-shadow: 0 3px 20px rgba(0,0,0,.3) !important;
+  }
+
+  .tab-label {
+    opacity: 0.8;
+    font-weight: 500;
+  }
+
+  .mat-tab-label.active, .mat-tab-label:hover {
+    opacity: 1 !important;
+  }
+
+  .mat-ink-bar {
+    box-shadow: 0 3px 20px rgba(0,0,0,.15);
+  }
+
+  mat-card {
+    border-radius: 0 !important;
+  }
+
+  .video-tabs .mat-ink-bar {
+    display: none;
+    height: 4px;
+    border: 0;
+    transform: skew(45deg) scaleX(0.7);
+    top: 35px;
+  }
+
+  .answer button, .retry button {
+    padding: 15px 10px;
+    height: 80px;
+    font-size: 16px;
+  }
+}
