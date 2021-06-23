@@ -10,6 +10,7 @@ import {PlayerModule} from "@rezonence/video-player";
 import {MatTabsModule} from "@angular/material/tabs";
 import {LinkPipe} from "./link.pipe";
 import {ArrowComponent} from "./arrow/arrow.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {ArrowComponent} from "./arrow/arrow.component";
         AppRoutingModule,
         FlexLayoutModule,
         PlayerModule,
-        MatTabsModule
+        MatTabsModule,
+        BrowserAnimationsModule
     ],
     bootstrap: [
         AppComponent
