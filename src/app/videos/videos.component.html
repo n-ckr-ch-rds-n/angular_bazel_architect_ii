@@ -30,10 +30,10 @@
                                     <app-arrow></app-arrow>
                                 </ng-container>
                             </ng-container>
-                            <div>CTA</div>
+                            <app-cta [videoConfig]="videoConfig" [theme]="config.theme" *ngIf="videoConfig.addCtaButton && videoConfig.ctaButton.placement === MenuPlacement.Bottom"></app-cta>
                         </div>
                     </div>
-                    <div>CTA</div>
+                    <app-cta [videoConfig]="videoConfig" [theme]="config.theme" *ngIf="videoConfig.addCtaButton && tabsPaginated" fxLayoutAlign="center" fxFlex="grow"></app-cta>
                 </div>
             </ng-container>
         </ng-container>

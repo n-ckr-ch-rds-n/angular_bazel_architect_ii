@@ -1,0 +1,9 @@
+<div class="cta" *ngIf="videoConfig" fxLayout="row">
+    <form [action]="videoConfig.ctaButton.link" target="_blank">
+        <button mat-flat-button fxLayoutAlign="center"
+                [style.backgroundColor]="theme.buttonColour"
+                [style.color]="theme.buttonTextColour">
+            {{videoConfig.ctaButton.text}}
+        </button>
+    </form>
+</div>

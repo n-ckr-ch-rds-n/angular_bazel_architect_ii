@@ -11,6 +11,8 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {LinkPipe} from "./link.pipe";
 import {ArrowComponent} from "./arrow/arrow.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CtaComponent } from "./cta/cta.component";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
     declarations: [
@@ -19,7 +21,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
         BannerComponent,
         VideosComponent,
         ArrowComponent,
-        LinkPipe
+        LinkPipe,
+        CtaComponent
     ],
     imports: [
         BrowserModule,
@@ -27,7 +30,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
         FlexLayoutModule,
         PlayerModule,
         MatTabsModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MatButtonModule
     ],
     bootstrap: [
         AppComponent
