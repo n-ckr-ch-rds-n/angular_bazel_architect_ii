@@ -1,6 +1,7 @@
 <div class="banner" fxLayout="column">
     <ng-container *ngIf="freewallConfig.image">
-        <div>BANNER IMAGE</div>
+        <app-banner-image [image]="freewallConfig.image" fxFlex="grow">
+        </app-banner-image>
     </ng-container>
     <ng-container *ngIf="data && freewallConfig.image || freewallConfig.iframe && !freewallConfig.iframe.hdq">
         <div>QUESTION AND ANSWERS</div>

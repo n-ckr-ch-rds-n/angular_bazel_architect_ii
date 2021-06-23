@@ -14,6 +14,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CtaComponent } from "./cta/cta.component";
 import {MatButtonModule} from "@angular/material/button";
 import { ResizerComponent } from './resizer/resizer.component';
+import { BannerImageComponent } from './banner-image/banner-image.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { ResizerComponent } from './resizer/resizer.component';
         ArrowComponent,
         LinkPipe,
         CtaComponent,
-        ResizerComponent
+        ResizerComponent,
+        BannerImageComponent
     ],
     imports: [
         BrowserModule,
