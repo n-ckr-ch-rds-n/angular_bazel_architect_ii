@@ -13,6 +13,7 @@ import {ArrowComponent} from "./arrow/arrow.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CtaComponent } from "./cta/cta.component";
 import {MatButtonModule} from "@angular/material/button";
+import { ResizerComponent } from './resizer/resizer.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import {MatButtonModule} from "@angular/material/button";
         VideosComponent,
         ArrowComponent,
         LinkPipe,
-        CtaComponent
+        CtaComponent,
+        ResizerComponent
     ],
     imports: [
         BrowserModule,
