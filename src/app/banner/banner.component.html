@@ -4,6 +4,7 @@
         </app-banner-image>
     </ng-container>
     <ng-container *ngIf="data && freewallConfig.image || freewallConfig.iframe && !freewallConfig.iframe.hdq">
-        <div>QUESTION AND ANSWERS</div>
+        <app-question-and-answers [question]="freewallConfig.questions[data.questionIndex]" [theme]=theme>
+        </app-question-and-answers>
     </ng-container>
 </div>

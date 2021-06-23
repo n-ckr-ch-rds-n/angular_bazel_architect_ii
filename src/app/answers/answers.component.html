@@ -1,0 +1,11 @@
+<div class="answers" fxLayout="wrap" fxLayout.xs="column" fxLayoutAlign="space-evenly stretch" fxLayoutGap="15px" fxLayoutGap.xs="10px">
+    <ng-container  *ngIf="!showHint; else hint">
+        <ng-container *ngFor="let answer of question.answers; let ix = index">
+            <div>ANSWER</div>
+        </ng-container>
+    </ng-container>
+    <ng-template #hint>
+        <div>HINT</div>
+        <div>RETRY</div>
+    </ng-template>
+</div>

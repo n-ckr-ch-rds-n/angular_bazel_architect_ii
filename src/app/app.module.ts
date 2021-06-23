@@ -18,6 +18,7 @@ import { BannerImageComponent } from './banner-image/banner-image.component';
 import { QuestionAndAnswersComponent } from './question-and-answers/question-and-answers.component';
 import {MatCardModule} from "@angular/material/card";
 import { QuestionComponent } from './question/question.component';
+import { AnswersComponent } from './answers/answers.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { QuestionComponent } from './question/question.component';
         ResizerComponent,
         BannerImageComponent,
         QuestionAndAnswersComponent,
-        QuestionComponent
+        QuestionComponent,
+        AnswersComponent
     ],
     imports: [
         BrowserModule,
