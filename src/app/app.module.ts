@@ -15,6 +15,9 @@ import { CtaComponent } from "./cta/cta.component";
 import {MatButtonModule} from "@angular/material/button";
 import { ResizerComponent } from './resizer/resizer.component';
 import { BannerImageComponent } from './banner-image/banner-image.component';
+import { QuestionAndAnswersComponent } from './question-and-answers/question-and-answers.component';
+import {MatCardModule} from "@angular/material/card";
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +29,9 @@ import { BannerImageComponent } from './banner-image/banner-image.component';
         LinkPipe,
         CtaComponent,
         ResizerComponent,
-        BannerImageComponent
+        BannerImageComponent,
+        QuestionAndAnswersComponent,
+        QuestionComponent
     ],
     imports: [
         BrowserModule,
@@ -35,7 +40,8 @@ import { BannerImageComponent } from './banner-image/banner-image.component';
         PlayerModule,
         MatTabsModule,
         BrowserAnimationsModule,
-        MatButtonModule
+        MatButtonModule,
+        MatCardModule
     ],
     bootstrap: [
         AppComponent
