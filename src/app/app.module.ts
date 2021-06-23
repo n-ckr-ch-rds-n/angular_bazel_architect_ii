@@ -20,6 +20,8 @@ import {MatCardModule} from "@angular/material/card";
 import { QuestionComponent } from './question/question.component';
 import { AnswersComponent } from './answers/answers.component';
 import { AnswerComponent } from './answer/answer.component';
+import { HintComponent } from './hint/hint.component';
+import { RetryComponent } from './retry/retry.component';
 
 @NgModule({
     declarations: [
@@ -35,7 +37,9 @@ import { AnswerComponent } from './answer/answer.component';
         QuestionAndAnswersComponent,
         QuestionComponent,
         AnswersComponent,
-        AnswerComponent
+        AnswerComponent,
+        HintComponent,
+        RetryComponent
     ],
     imports: [
         BrowserModule,

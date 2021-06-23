@@ -6,7 +6,7 @@
         </ng-container>
     </ng-container>
     <ng-template #hint>
-        <div>HINT</div>
-        <div>RETRY</div>
+        <app-hint [question]="question"></app-hint>
+        <app-retry (retryClick)="showHint = false" [theme]="theme"></app-retry>
     </ng-template>
 </div>
