@@ -1,7 +1,8 @@
 <div *ngIf="freewallDataPromise | async as data">
     <ng-container *ngIf="data.placement === Placement.Banner; else response">
         <ng-container *ngIf="configPromise | async as config">
-            <div>BANNER VIDEOS</div>
+            <app-banner [freewallConfig]="data.config" [data]="data" *ngIf="!answerClickEvent" [theme]="config.theme">
+            </app-banner>
         </ng-container>
     </ng-container>
     <ng-template #response>
