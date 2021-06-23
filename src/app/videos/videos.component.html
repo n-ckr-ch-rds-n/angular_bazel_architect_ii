@@ -1,0 +1,42 @@
+<ng-container *ngIf="config">
+    <div [class.no-headers]="config.videos.length === 1" class="video-tabs">
+        <mat-tab-group mat-stretch-tabs
+                       [headerPosition]="headerPosition"
+                       [(selectedIndex)]="videoIndex"
+                       disableRipple="true">
+            <mat-tab *ngFor="let video of config.videos; let ix = index;" [class.active]="ix === videoIndex">
+                <ng-template mat-tab-label>
+                    <div class="tab-label" [class.active]="ix === videoIndex" #tabLabel [style.color]="config.theme.labelTextColour">
+                        {{video.title}}
+                    </div>
+                </ng-template>
+                <rez-video-player #player
+                                  *ngIf="ix === videoIndex"
+                                  [vastTagUrl]="video.vastUrl | link | async"
+                                  [volume]="0"
+                                  [autoplay]="true"
+                                  [loop]="false"
+                                  (videoCompleted)="onVideoComplete()">
+                </rez-video-player>
+            </mat-tab>
+        </mat-tab-group>
+        <ng-container *ngIf="config.videos[videoIndex] as videoConfig">
+            <ng-container *ngIf="config.videos.length > 1 || videoConfig.addCtaButton">
+                <div class="footer" fxLayout="row" [style.backgroundColor]="config.theme.backgroundColour">
+                    <div fxFlexOffset="{{100 * videoIndex / config.videos.length}}" fxFlex="{{100 / config.videos.length}}" fxLayout="row" fxLayoutAlign="center" class="tab-extras" *ngIf="!tabsPaginated">
+                        <div fxLayout="column" fxLayoutAlign="center center">
+                            <ng-container *ngIf="tabLabel">
+                                <ng-container *ngIf="tabLabel.nativeElement as tabLabelElement">
+                                    <app-arrow></app-arrow>
+                                </ng-container>
+                            </ng-container>
+                            <div>CTA</div>
+                        </div>
+                    </div>
+                    <div>CTA</div>
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-container>
+
