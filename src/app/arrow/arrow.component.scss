@@ -1,0 +1,36 @@
+.arrow {
+  width: 0;
+  height: 0;
+  /*border-style: solid;*/
+}
+
+.arrow.up, .arrow.down {
+  border-left-style: solid;
+  border-right-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+
+}
+
+.arrow.left, .arrow.right {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.arrow.up {
+  border-bottom-style: solid;
+}
+
+.arrow.down {
+  border-top-style: solid;
+}
+
+.arrow.left {
+  border-right-style: solid;
+}
+
+.arrow.right {
+  border-left-style: solid;
+}

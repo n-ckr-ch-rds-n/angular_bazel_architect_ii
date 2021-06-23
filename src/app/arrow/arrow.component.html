@@ -1,1 +1,11 @@
-<p>arrow works!</p>
+<div class="arrow" *ngIf="elementRef"
+     [class.up]="direction === ArrowDirection.Up"
+     [class.down]="direction === ArrowDirection.Down"
+     [class.left]="direction===ArrowDirection.Left"
+     [class.right]="direction===ArrowDirection.Right"
+     [style.border-top-width]="height"
+     [style.border-bottom-width]="height"
+     [style.border-left-width]="width"
+     [style.border-right-width]="width"
+     [style.color]="theme.backgroundColour">
+</div>

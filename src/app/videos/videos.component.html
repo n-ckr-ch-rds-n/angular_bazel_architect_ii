@@ -27,7 +27,7 @@
                         <div fxLayout="column" fxLayoutAlign="center center">
                             <ng-container *ngIf="tabLabel">
                                 <ng-container *ngIf="tabLabel.nativeElement as tabLabelElement">
-                                    <app-arrow></app-arrow>
+                                    <app-arrow [direction]="arrowDirection" [ngStyle]="{'bottom.px': (tabLabelElement.parentNode.parentNode.parentNode.offsetHeight)}" [theme]="config.theme" ></app-arrow>
                                 </ng-container>
                             </ng-container>
                             <app-cta [videoConfig]="videoConfig" [theme]="config.theme" *ngIf="videoConfig.addCtaButton && videoConfig.ctaButton.placement === MenuPlacement.Bottom"></app-cta>
