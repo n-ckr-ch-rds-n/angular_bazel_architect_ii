@@ -19,6 +19,7 @@ import { QuestionAndAnswersComponent } from './question-and-answers/question-and
 import {MatCardModule} from "@angular/material/card";
 import { QuestionComponent } from './question/question.component';
 import { AnswersComponent } from './answers/answers.component';
+import { AnswerComponent } from './answer/answer.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { AnswersComponent } from './answers/answers.component';
         BannerImageComponent,
         QuestionAndAnswersComponent,
         QuestionComponent,
-        AnswersComponent
+        AnswersComponent,
+        AnswerComponent
     ],
     imports: [
         BrowserModule,

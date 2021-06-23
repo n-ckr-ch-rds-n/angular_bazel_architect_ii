@@ -1,0 +1,6 @@
+<div class="answer answer-{{index}}">
+    <button mat-flat-button (click)="answerClick.emit()" disableRipple="true"
+            [style.backgroundColor]="theme.buttonColour">
+        {{answer.ans}}
+    </button>
+</div>

@@ -1,7 +1,8 @@
 <div class="answers" fxLayout="wrap" fxLayout.xs="column" fxLayoutAlign="space-evenly stretch" fxLayoutGap="15px" fxLayoutGap.xs="10px">
     <ng-container  *ngIf="!showHint; else hint">
         <ng-container *ngFor="let answer of question.answers; let ix = index">
-            <div>ANSWER</div>
+            <app-answer [answer]="answer" (answerClick)="answerClicked(answer)" [index]="ix" fxFlex="auto" [theme]="theme">
+            </app-answer>
         </ng-container>
     </ng-container>
     <ng-template #hint>
