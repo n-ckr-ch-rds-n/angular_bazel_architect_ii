@@ -5,17 +5,27 @@ import {AppComponent} from "./app.component";
 import {ContainerComponent} from "./container/container.component";
 import {BannerComponent} from "./banner/banner.component";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {VideosComponent} from "./videos/videos.component";
+import {PlayerModule} from "@rezonence/video-player";
+import {MatTabsModule} from "@angular/material/tabs";
+import {LinkPipe} from "./link.pipe";
+import {ArrowComponent} from "./arrow/arrow.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         ContainerComponent,
-        BannerComponent
+        BannerComponent,
+        VideosComponent,
+        ArrowComponent,
+        LinkPipe
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FlexLayoutModule,
+        PlayerModule,
+        MatTabsModule
     ],
     bootstrap: [
         AppComponent
