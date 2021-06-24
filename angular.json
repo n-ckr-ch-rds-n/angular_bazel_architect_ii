@@ -86,17 +86,17 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "preserveSymlinks": true,
-            "main": "src/test.ts",
+            "main": "multi-video-microsite/src/test.ts",
             "polyfills": "multi-video-microsite/src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "tsConfig": "multi-video-microsite/tsconfig.spec.json",
+            "karmaConfig": "multi-video-microsite/karma.conf.js",
             "watch": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "multi-video-microsite/src/favicon.ico",
+              "multi-video-microsite/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "multi-video-microsite/src/styles.scss"
             ],
             "scripts": []
           }
