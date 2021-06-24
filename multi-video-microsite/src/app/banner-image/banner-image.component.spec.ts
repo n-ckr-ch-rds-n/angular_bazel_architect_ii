@@ -19,6 +19,8 @@ describe("BannerComponent", () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(BannerImageComponent);
         component = fixture.componentInstance;
+        const mockImage = {img: "foo", lnk: "bar"};
+        component.image = mockImage;
         fixture.detectChanges();
     });
 
