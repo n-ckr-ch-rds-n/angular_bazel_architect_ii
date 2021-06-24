@@ -1,7 +1,7 @@
 import {FreeWallConfig} from "@rezonence/core/config-extractor/freewall/freewall.config";
 import {defaultFreewallConfig} from "@rezonence/core/test-utils/default.freewall.config";
 import {Answer} from "@rezonence/core/config-extractor/freewall/answer";
-import angularConfig from "../../angular.json";
+import angularConfig from "../../../angular.json";
 
 export const testFreewallConfig: FreeWallConfig = JSON.parse(JSON.stringify(defaultFreewallConfig)) as FreeWallConfig;
 
