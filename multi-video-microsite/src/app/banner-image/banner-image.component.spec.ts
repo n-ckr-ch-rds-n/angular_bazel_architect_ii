@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed} from "@angular/core/testing";
+import {ComponentFixture, TestBed, waitForAsync} from "@angular/core/testing";
 import {BannerImageComponent} from "./banner-image.component";
 import {LinkPipe} from "../link.pipe";
 
@@ -6,7 +6,7 @@ describe("BannerComponent", () => {
     let component: BannerImageComponent;
     let fixture: ComponentFixture<BannerImageComponent>;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
             declarations: [
                 BannerImageComponent,

@@ -105,9 +105,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "multi-video-microsite/tsconfig.app.json",
+              "multi-video-microsite/tsconfig.spec.json",
+              "multi-video-microsite/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"

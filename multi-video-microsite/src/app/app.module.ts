@@ -13,15 +13,15 @@ import {ArrowComponent} from "./arrow/arrow.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CtaComponent } from "./cta/cta.component";
 import {MatButtonModule} from "@angular/material/button";
-import { ResizerComponent } from './resizer/resizer.component';
-import { BannerImageComponent } from './banner-image/banner-image.component';
-import { QuestionAndAnswersComponent } from './question-and-answers/question-and-answers.component';
+import { ResizerComponent } from "./resizer/resizer.component";
+import { BannerImageComponent } from "./banner-image/banner-image.component";
+import { QuestionAndAnswersComponent } from "./question-and-answers/question-and-answers.component";
 import {MatCardModule} from "@angular/material/card";
-import { QuestionComponent } from './question/question.component';
-import { AnswersComponent } from './answers/answers.component';
-import { AnswerComponent } from './answer/answer.component';
-import { HintComponent } from './hint/hint.component';
-import { RetryComponent } from './retry/retry.component';
+import { QuestionComponent } from "./question/question.component";
+import { AnswersComponent } from "./answers/answers.component";
+import { AnswerComponent } from "./answer/answer.component";
+import { HintComponent } from "./hint/hint.component";
+import { RetryComponent } from "./retry/retry.component";
 
 @NgModule({
     declarations: [

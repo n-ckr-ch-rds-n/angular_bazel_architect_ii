@@ -139,12 +139,12 @@ architect_test(
 
 architect(
     name = "lint",
-    args = ["multi-video-microsite:lint"],
+    args = ["multi-video-microsite:lint", "--fix"],
     data = glob([
         "src/**/*",
         "e2e/src/**/*",
     ]) + [
-        "//:common_deps",
+        "//multi-video-microsite:common_deps",
         "tsconfig.spec.json",
         "tsconfig.app.json",
         "tslint.json",

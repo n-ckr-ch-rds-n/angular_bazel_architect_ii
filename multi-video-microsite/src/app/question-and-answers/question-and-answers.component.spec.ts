@@ -1,28 +1,28 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import {ComponentFixture, TestBed, waitForAsync} from "@angular/core/testing";
 
-import { QuestionAndAnswersComponent } from "./question-and-answers.component";
+import {QuestionAndAnswersComponent} from "./question-and-answers.component";
 import {Question} from "@rezonence/core/config-extractor/freewall/question";
 
 describe("QuestionAndAnswersComponent", () => {
-  let component: QuestionAndAnswersComponent;
-  let fixture: ComponentFixture<QuestionAndAnswersComponent>;
+    let component: QuestionAndAnswersComponent;
+    let fixture: ComponentFixture<QuestionAndAnswersComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ QuestionAndAnswersComponent ]
-    })
-    .compileComponents();
-  }));
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [QuestionAndAnswersComponent]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(QuestionAndAnswersComponent);
-    component = fixture.componentInstance;
-    component.question = {que: "foo"} as Question;
-    component.theme = {};
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(QuestionAndAnswersComponent);
+        component = fixture.componentInstance;
+        component.question = {que: "foo"} as Question;
+        component.theme = {};
+        fixture.detectChanges();
+    });
 
-  it("should create", () => {
-    expect(component).toBeTruthy();
-  });
+    it("should create", () => {
+        expect(component).toBeTruthy();
+    });
 });

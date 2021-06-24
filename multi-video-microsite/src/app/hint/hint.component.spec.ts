@@ -1,27 +1,26 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-
-import { HintComponent } from "./hint.component";
+import {ComponentFixture, TestBed, waitForAsync} from "@angular/core/testing";
+import {HintComponent} from "./hint.component";
 
 describe("HintComponent", () => {
-  let component: HintComponent;
-  let fixture: ComponentFixture<HintComponent>;
+    let component: HintComponent;
+    let fixture: ComponentFixture<HintComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HintComponent ]
-    })
-    .compileComponents();
-  }));
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
+            declarations: [HintComponent]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HintComponent);
-    component = fixture.componentInstance;
-    component.theme = {labelTextColour: "green"};
-    component.question = {hnt: "foo", que: "bar", answers: []};
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(HintComponent);
+        component = fixture.componentInstance;
+        component.theme = {labelTextColour: "green"};
+        component.question = {hnt: "foo", que: "bar", answers: []};
+        fixture.detectChanges();
+    });
 
-  it("should create", () => {
-    expect(component).toBeTruthy();
-  });
+    it("should create", () => {
+        expect(component).toBeTruthy();
+    });
 });
