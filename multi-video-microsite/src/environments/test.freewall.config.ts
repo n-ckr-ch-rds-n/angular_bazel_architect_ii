@@ -1,11 +1,10 @@
 import {FreeWallConfig} from "@rezonence/core/config-extractor/freewall/freewall.config";
 import {defaultFreewallConfig} from "@rezonence/core/test-utils/default.freewall.config";
 import {Answer} from "@rezonence/core/config-extractor/freewall/answer";
-import angularConfig from "../../../angular.json";
 
 export const testFreewallConfig: FreeWallConfig = JSON.parse(JSON.stringify(defaultFreewallConfig)) as FreeWallConfig;
 
-const port = angularConfig.projects[angularConfig.defaultProject].architect.serve.options.port;
+const port = 4200;
 
 const question = testFreewallConfig.questions[0];
 question.que = "If you could jump on the train right now, where would you go?";

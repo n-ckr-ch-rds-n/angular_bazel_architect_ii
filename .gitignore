@@ -45,9 +45,10 @@ testem.log
 .DS_Store
 Thumbs.db
 
-cli-builder
-json-merger
-json-to-ts
-worker
-rez_bundle
-package-builder
+/cli-builder/
+/json-merger/
+/json-to-ts/
+/package-builder/
+/rez_bundle/
+/sdk/
+/worker/

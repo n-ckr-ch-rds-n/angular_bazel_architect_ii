@@ -1,3 +1,20 @@
 {
-
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "types": [],
+    "baseUrl": "."
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules"
+  ]
 }

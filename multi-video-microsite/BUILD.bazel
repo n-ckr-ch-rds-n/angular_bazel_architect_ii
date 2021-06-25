@@ -1,5 +1,6 @@
 load("@npm//@angular-devkit/architect-cli:index.bzl", "architect", "architect_test")
 load("@npm//@bazel/typescript:index.bzl", "ts_library")
+load("//json-to-ts:index.bzl", "json_to_ts")
 
 # These dependencies are needed for any ng command
 filegroup(
@@ -30,11 +31,16 @@ APPLICATION_DEPS = [
     "@npm//typescript",
 ]
 
+json_to_ts(
+    name = "json_files",
+    srcs = ["proxy.conf.json"]
+)
+
 ts_library(
     name = "server",
     srcs = [
         "local-freewall/server.ts",
-    ] + glob(["src/environments/*.ts"]) + glob(["src/app/config/*.ts"]),
+    ] + glob(["src/environments/*.ts"]) + glob(["src/app/config/*.ts"]) + ["json_files"],
     deps = [
         "@npm//@rezonence/core",
         "@npm//@rezonence/schema-generator",

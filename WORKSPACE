@@ -16,6 +16,18 @@ http_archive(
     urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/3.6.0/rules_nodejs-3.6.0.tar.gz"],
 )
 
+_ESBUILD_VERSION = "0.11.14"
+
+http_archive(
+    name = "esbuild_darwin",
+    build_file_content = """exports_files(["bin/esbuild"])""",
+    sha256 = "81c8623c4c03a1fc449c37a90dd630025e334d312420d42106a899f78bd5e3fe",
+    strip_prefix = "package",
+    urls = [
+        "https://registry.npmjs.org/esbuild-darwin-64/-/esbuild-darwin-64-%s.tgz" % _ESBUILD_VERSION,
+    ],
+)
+
 # The yarn_install rule runs yarn anytime the package.json or yarn.lock file changes.
 # It also extracts and installs any Bazel rules distributed in an npm package.
 load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")

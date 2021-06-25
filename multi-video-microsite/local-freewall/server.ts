@@ -30,7 +30,6 @@ import {resolve as resolvePath} from "path";
 import {tmpdir} from "os";
 import {environment as awsEnv} from "@rezonence/core/aws/environment";
 import {LocalS3Server} from "@rezonence/core/test-utils/local.s3.server";
-import angularConfig from "../../angular.json";
 import proxyConfig from "../proxy.conf.json";
 import * as S3 from "aws-sdk/clients/s3";
 import {SchemaValidator} from "@rezonence/schema-generator";
@@ -38,8 +37,7 @@ import {CssConfigCompiler} from "@rezonence/core";
 
 const localS3Target = new URL(`${proxyConfig["/demo"].target}`);
 const localS3Port = parseInt(localS3Target.port, 10);
-const projects = angularConfig.projects;
-const port = (projects["multi-video-microsite"].architect.serve.options as any).port;
+const port = 4200;
 
 let localS3Server: LocalS3Server;
 let demoServer: DemoServer;
