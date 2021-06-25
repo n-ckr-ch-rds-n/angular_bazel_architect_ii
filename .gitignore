@@ -52,3 +52,5 @@ Thumbs.db
 /rez_bundle/
 /sdk/
 /worker/
+/schema-generator/
+/esbuild/
