@@ -189,7 +189,7 @@ architect(
 architect(
     name = "serve",
     args = [
-        "multi-video-microsite:serve",
+        "multi-video-microsite:serve"
     ],
     configuration_env_vars = ["NG_BUILD_CACHE"],
     data = glob(
@@ -203,6 +203,7 @@ architect(
         ],
     ) + APPLICATION_DEPS + [
         "tsconfig.app.json",
+        "proxy.conf.json"
     ],
     tags = ["ibazel_notify_changes"],
 )
