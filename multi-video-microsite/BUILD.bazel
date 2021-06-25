@@ -1,6 +1,7 @@
 load("@npm//@angular-devkit/architect-cli:index.bzl", "architect", "architect_test")
 load("@npm//@bazel/typescript:index.bzl", "ts_library")
 load("//json-to-ts:index.bzl", "json_to_ts")
+load("//cli-builder:index.bzl", "cli")
 
 # These dependencies are needed for any ng command
 filegroup(
@@ -49,6 +50,15 @@ ts_library(
         "@npm//@types/node",
         "@npm//aws-sdk",
     ]
+)
+
+cli(
+    name = "server_cli",
+    bin_name = "server_bin",
+    entry_point = "local-freewall/server.ts",
+    deps = [
+        "server",
+    ],
 )
 
 architect(
