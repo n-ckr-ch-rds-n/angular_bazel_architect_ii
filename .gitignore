@@ -44,3 +44,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+cli-builder
+json-merger
+json-to-ts
+worker
+rez_bundle
+package-builder
