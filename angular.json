@@ -102,16 +102,12 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "multi-video-microsite/tsconfig.app.json",
-              "multi-video-microsite/tsconfig.spec.json",
-              "multi-video-microsite/e2e/tsconfig.json"
+            "lintFilePatterns": [
+              "multi-video-microsite/src/**/*.ts",
+              "multi-video-microsite/src/**/*.html"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {

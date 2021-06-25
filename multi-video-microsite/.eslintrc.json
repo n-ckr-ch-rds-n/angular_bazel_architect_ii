@@ -1,0 +1,10 @@
+{
+  "extends": "@rezonence/eslint-config-angular",
+  "parserOptions": {
+    "project": [
+      "multi-video-microsite/tsconfig.app.json",
+      "multi-video-microsite/tsconfig.spec.json"
+    ],
+    "createDefaultProgram": true
+  }
+}

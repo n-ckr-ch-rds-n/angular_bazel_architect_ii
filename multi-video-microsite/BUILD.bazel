@@ -139,20 +139,18 @@ architect_test(
 
 architect(
     name = "lint",
-    args = ["multi-video-microsite:lint", "--fix"],
+    args = ["multi-video-microsite:lint"],
     data = glob([
         "src/**/*",
-        "e2e/src/**/*",
     ]) + [
         "//multi-video-microsite:common_deps",
         "tsconfig.spec.json",
         "tsconfig.app.json",
-        "tslint.json",
-        "e2e/tsconfig.json",
+        ".eslintrc.json",
         "@npm//@angular/cli",
-        "@npm//@angular-devkit/build-angular",
-        "@npm//codelyzer",
-        "@npm//tslint",
+        "@npm//@angular-eslint/builder",
+        "@npm//eslint",
+        "@npm//@types/eslint"
     ],
 )
 
