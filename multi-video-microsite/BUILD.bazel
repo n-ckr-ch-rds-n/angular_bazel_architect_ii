@@ -136,39 +136,6 @@ architect_test(
     ],
 )
 
-architect_test(
-    name = "e2e",
-    args = [
-        "multi-video-microsite:e2e",
-        "--no-webdriverUpdate",
-    ],
-    configuration_env_vars = ["NG_BUILD_CACHE"],
-    data = glob([
-        "src/*",
-        "src/**",
-        "e2e/*",
-        "e2e/**",
-    ]) + APPLICATION_DEPS + [
-        "tsconfig.app.json",
-        "@npm//protractor",
-        "@npm//jasmine-spec-reporter",
-        "@npm//ts-node",
-        "@npm//@types/jasmine",
-        "@npm//@types/jasminewd2",
-        "@npm//@types/node",
-    ],
-    tags = [
-        "browser:chromium-local",
-        # Fails in buildkite with this error
-        # [19:48:16] E/launcher - unknown error: cannot find Chrome binary
-        #   (Driver info: chromedriver=79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}),platform=Mac OS X 10.15.3 x86_64)
-        # [19:48:16] E/launcher - WebDriverError: unknown error: cannot find Chrome binary
-        #   (Driver info: chromedriver=79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}),platform=Mac OS X 10.15.3 x86_64)
-        #     at Object.checkLegacyResponse
-        "no-bazelci-mac",
-    ],
-)
-
 architect(
     name = "lint",
     args = ["multi-video-microsite:lint"],
@@ -225,6 +192,7 @@ architect(
         ],
     ) + APPLICATION_DEPS + [
         "tsconfig.app.json",
+        "proxy.conf.json"
     ],
     tags = ["ibazel_notify_changes"],
 )
