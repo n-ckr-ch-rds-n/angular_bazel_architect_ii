@@ -107,7 +107,7 @@
             "lintFilePatterns": [
               "multi-video-microsite/src/**/*.ts",
               "multi-video-microsite/src/**/*.html"
-            ],
+            ]
           }
         },
         "e2e": {
