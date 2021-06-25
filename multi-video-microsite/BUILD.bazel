@@ -1,4 +1,5 @@
 load("@npm//@angular-devkit/architect-cli:index.bzl", "architect", "architect_test")
+load("@npm//@bazel/typescript:index.bzl", "ts_library")
 
 # These dependencies are needed for any ng command
 filegroup(
@@ -28,6 +29,21 @@ APPLICATION_DEPS = [
     "@npm//tslib",
     "@npm//typescript",
 ]
+
+ts_library(
+    name = "server",
+    srcs = [
+        "local-freewall/server.ts",
+    ] + glob(["src/environments/*.ts"]) + glob(["src/app/config/*.ts"]),
+    deps = [
+        "@npm//@rezonence/core",
+        "@npm//@rezonence/schema-generator",
+        "@npm//@rezonence/sdk",
+        "@npm//@djabry/fs-s3",
+        "@npm//@types/node",
+        "@npm//aws-sdk",
+    ]
+)
 
 architect(
     name = "build",
