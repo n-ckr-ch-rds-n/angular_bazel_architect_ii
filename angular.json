@@ -3,6 +3,128 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "architect-test": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "architect-test/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "forkTypeChecker": false,
+            "preserveSymlinks": true,
+            "outputPath": "dist/architect-test",
+            "index": "architect-test/src/index.html",
+            "main": "architect-test/src/main.ts",
+            "polyfills": "architect-test/src/polyfills.ts",
+            "tsConfig": "architect-test/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "architect-test/src/favicon.ico",
+              "architect-test/src/assets"
+            ],
+            "styles": [
+              "architect-test/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "architect-test/src/environments/environment.ts",
+                  "with": "architect-test/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "architect-test:build",
+            "proxyConfig": "architect-test/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "architect-test:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "architect-test:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "preserveSymlinks": true,
+            "main": "architect-test/src/test.ts",
+            "polyfills": "architect-test/src/polyfills.ts",
+            "tsConfig": "architect-test/tsconfig.spec.json",
+            "karmaConfig": "architect-test/karma.conf.js",
+            "watch": false,
+            "assets": [
+              "architect-test/src/favicon.ico",
+              "architect-test/src/assets"
+            ],
+            "styles": [
+              "architect-test/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "architect-test/src/**/*.ts",
+              "architect-test/src/**/*.html"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "architect-test:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "architect-test:serve:production"
+            }
+          }
+        }
+      }
+    },
     "multi-video-microsite": {
       "projectType": "application",
       "schematics": {
