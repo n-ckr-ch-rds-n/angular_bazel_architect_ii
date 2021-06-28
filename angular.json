@@ -1,8 +1,50 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "",
   "projects": {
+    "frontend-lib": {
+      "projectType": "library",
+      "root": "frontend-lib",
+      "sourceRoot": "frontend-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "frontend-lib/tsconfig.lib.json",
+            "project": "frontend-lib/ng-package.js"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "frontend-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "preserveSymlinks": true,
+            "watch": false,
+            "main": "frontend-lib/src/test.ts",
+            "tsConfig": "frontend-lib/tsconfig.spec.json",
+            "karmaConfig": "frontend-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "frontend-lib/tsconfig.lib.json",
+              "frontend-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "architect-test": {
       "projectType": "application",
       "schematics": {
