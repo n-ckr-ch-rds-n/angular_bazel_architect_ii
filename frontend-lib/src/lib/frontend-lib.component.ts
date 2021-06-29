@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-frontend-lib',
-  template: `
-    <p>
-      frontend-lib works!
-    </p>
-  `,
+  templateUrl: './frontend-lib.component.html',
   styles: []
 })
 export class FrontendLibComponent implements OnInit {

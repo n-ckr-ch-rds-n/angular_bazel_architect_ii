@@ -12,7 +12,6 @@ filegroup(
     visibility = ["//:__subpackages__"],
 )
 
-
 architect(
     name = "build",
     args = [
