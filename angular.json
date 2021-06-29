@@ -69,7 +69,12 @@
             "aot": true,
             "assets": [
               "architect-test/src/favicon.ico",
-              "architect-test/src/assets"
+              "architect-test/src/assets",
+              {
+                "glob": "*",
+                "input": "./frontend-lib/src/assets",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "architect-test/src/styles.scss"
