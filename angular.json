@@ -3,6 +3,26 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
+    "video-player": {
+      "projectType": "library",
+      "root": "video-player",
+      "sourceRoot": "video-player/lib",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "video-player/tsconfig.lib.json",
+            "project": "video-player/ng-package.js"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "video-player/tsconfig.lib.prod.json"
+            }
+          }
+        }
+      }
+    },
     "frontend-lib": {
       "projectType": "library",
       "root": "frontend-lib",
