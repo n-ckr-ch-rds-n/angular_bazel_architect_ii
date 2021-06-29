@@ -223,14 +223,14 @@
     universal-analytics "0.4.23"
     uuid "8.3.2"
 
-"@angular/common@11.2.3", "@angular/common@^11.2.0":
+"@angular/common@11.2.3":
   version "11.2.3"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-11.2.3.tgz#e71d645fb6bdef9463f23a551cc072ef276c1d84"
   integrity sha512-51gVmr942SZtAFmhVfp7/3fcTQ+Tia7UxWjv6iUtYF3oCvTWbo/J1zki2VNSfmMNKJV8MaMq6XUw8UWbHA0sgQ==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/compiler-cli@11.2.3", "@angular/compiler-cli@^11.2.0":
+"@angular/compiler-cli@11.2.3":
   version "11.2.3"
   resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-11.2.3.tgz#5307215b9aa6e32d772906fd3b2960ba03a7565d"
   integrity sha512-ObQVI6q2c0VTWbsDnWJDdUZv2Jz/u1jiQNcrdtu/rjtJARaldEno9dMakN838Q6Nw4FzKUO6uYZXmnvKCUjfxQ==
@@ -251,14 +251,14 @@
     tslib "^2.0.0"
     yargs "^16.1.1"
 
-"@angular/compiler@11.2.3", "@angular/compiler@9.0.0", "@angular/compiler@^11.2.0":
+"@angular/compiler@11.2.3", "@angular/compiler@9.0.0":
   version "11.2.3"
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-11.2.3.tgz#72427d57b992bf6840fb7268357a466095caf8eb"
   integrity sha512-De8BwtSwPVYGdvQa6CDq2C1SLmB78YjS0t/KNlvfp85cl4Gb3BdjTDsKMkJXkm/3ubnIXi1BaRIsFNVTCCF70Q==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/core@11.2.3", "@angular/core@9.0.0", "@angular/core@^11.2.0":
+"@angular/core@11.2.3", "@angular/core@9.0.0":
   version "11.2.3"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-11.2.3.tgz#7dd59f35e0b2410543a61be6048c474c18a43f40"
   integrity sha512-+G7rZj21Mcmf6nWjQ79EwomwEOVQ1WLqw6YvCXWzgJ9ZlVjLi/Sti0/jIzUpgK0E0Fn86yuXw/vgYq5kjGeOcQ==
@@ -298,14 +298,14 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/platform-browser@11.2.3", "@angular/platform-browser@^11.2.0":
+"@angular/platform-browser@11.2.3":
   version "11.2.3"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-11.2.3.tgz#0c6b537500a1c6304829fab19cf8c12daa2b48b9"
   integrity sha512-S0IP/kGinIH18+gfnX0gLFLbP0Euw1RBceDt/WipYhUeFZZryQHvot/6KFLFtO+8rVunfrg+UyBiaK65/TT9Og==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/router@11.2.3", "@angular/router@^11.2.0":
+"@angular/router@11.2.3":
   version "11.2.3"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-11.2.3.tgz#407a0797845c1cac963663537b30872e39e4b229"
   integrity sha512-lRuEIlNj2BcBZ17mt5SZY7v80PsvlS4J6EbKSOFeSYhALM/AQnaaCdrrMlQ1WyEa5bBUabxGT9/zvahBosy2yA==
@@ -2313,25 +2313,6 @@
   dependencies:
     axios "^0.21.1"
     tslib "^2.1.0"
-
-"@rezonence/video-player@^3.14.0":
-  version "3.14.0"
-  resolved "https://registry.yarnpkg.com/@rezonence/video-player/-/video-player-3.14.0.tgz#0a6bfe57e1609d94f97adddadf6df7d0e1c4535e"
-  integrity sha512-eNC5Mbnae8U/urP/7zexjLgAX0qqaWX3SxJ2ssiOH8uJZNjcwYF6sFq2EJj3A5/QWLU9/3o5qpQQv3IEdnWcGw==
-  dependencies:
-    "@angular/common" "^11.2.0"
-    "@angular/compiler" "^11.2.0"
-    "@angular/compiler-cli" "^11.2.0"
-    "@angular/core" "^11.2.0"
-    "@angular/platform-browser" "^11.2.0"
-    "@angular/router" "^11.2.0"
-    "@rezonence/sdk" "^3.14.0"
-    axios "^0.21.1"
-    lodash "^4.17.21"
-    ngx-videogular "^10.1.0-0"
-    rxjs "^6.6.3"
-    tslib "^2.1.0"
-    typescript "4.1.3"
 
 "@rezonence/worker@^3.14.0":
   version "3.14.0"
@@ -12026,13 +12007,6 @@ rxjs@^6.6.0:
   version "6.6.6"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.6.tgz#14d8417aa5a07c5e633995b525e1e3c0dec03b70"
   integrity sha512-/oTwee4N4iWzAMAL9xdGKjkEHmIwupR3oXbQjCKywF1BeFohswF3vZdogbmEF6pZkOsXTzWkrZszrWpQTByYVg==
-  dependencies:
-    tslib "^1.9.0"
-
-rxjs@^6.6.3:
-  version "6.6.7"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
-  integrity sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==
   dependencies:
     tslib "^1.9.0"
 

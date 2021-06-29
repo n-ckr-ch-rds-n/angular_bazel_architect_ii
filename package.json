@@ -36,7 +36,6 @@
     "@rezonence/eslint-config-angular": "^3.14.0",
     "@rezonence/schema-generator": "^3.14.0",
     "@rezonence/sdk": "^3.14.0",
-    "@rezonence/video-player": "^3.14.0",
     "aws-sdk": "^2.934.0",
     "axios": "^0.21.1",
     "mime": "^2.4.4",

@@ -15,6 +15,7 @@ filegroup(
 
 APPLICATION_DEPS = [
     "//multi-video-microsite:common_deps",
+    "//video-player",
     "@npm//@angular/cli",
     "@npm//@angular/core",
     "@npm//@angular/flex-layout",
@@ -23,13 +24,13 @@ APPLICATION_DEPS = [
     "@npm//@angular-devkit/build-angular",
     "@npm//@rezonence/core",
     "@npm//@rezonence/sdk",
-    "@npm//@rezonence/video-player",
     "@npm//rxjs",
     "@npm//mime",
     "@npm//zone.js",
     "@npm//tslib",
     "@npm//typescript",
-    "@npm//aws-sdk"
+    "@npm//aws-sdk",
+    "@npm//ngx-videogular"
 ]
 
 json_to_ts(
