@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
+import {Optional} from "@rezonence/sdk";
 import { FrontendLibComponent } from './frontend-lib.component';
 
 describe('FrontendLibComponent', () => {
@@ -20,6 +20,7 @@ describe('FrontendLibComponent', () => {
   });
 
   it('should create', () => {
+    const optional = Optional.of("foo");
     expect(component).toBeTruthy();
   });
 });

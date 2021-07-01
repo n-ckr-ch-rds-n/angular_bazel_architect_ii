@@ -1,0 +1,23 @@
+<vg-player>
+    <rez-ima [vgAdTagUrl]="vastTagUrl"
+            (allAdsComplete)="complete()">
+    </rez-ima>
+    <div class="play-button-container" *ngIf="!(autoplay || (videoStarted && playing))">
+        <img class="play-button" (click)="play()" src="../assets/play.svg">
+    </div>
+    <img class="volume-button"
+         (click)="toggleVolume()"
+         [src]="volume ? 'assets/on.svg' : 'assets/off.svg'">
+    <div class="video-container">
+        <video class="video-element"
+               #videoElement
+               [vgMedia]="videoElement"
+               [src]="'assets/black.mp4'"
+               [muted]="!volume"
+               [autoplay]="autoplay"
+               [loop]="loop"
+               playsinline
+               crossorigin>
+        </video>
+    </div>
+</vg-player>

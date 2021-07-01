@@ -1,0 +1,9 @@
+{
+  "extends": "@rezonence/typescript/tslint.json",
+  "linterOptions": {
+    "exclude": [
+      "node_modules",
+      "**/*.d.ts"
+    ]
+  }
+}

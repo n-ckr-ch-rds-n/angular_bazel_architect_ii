@@ -1,0 +1,56 @@
+load("@build_bazel_rules_nodejs//:index.bzl", "pkg_npm")
+load("@npm//@angular-devkit/architect-cli:index.bzl", "architect", "architect_test")
+
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "common_deps",
+    srcs = [
+        "//:angular.json",
+        "tsconfig.json",
+    ],
+    visibility = ["//:__subpackages__"],
+)
+
+architect(
+    name = "build",
+    args = [
+        "video-player:build",
+        "--",
+        # Our custom ng-packagr.js file reads this argument and inserts it into the configuration object
+        "$(@D)",
+    ],
+    data = glob(
+        [
+            "src/**/*",
+        ],
+        exclude = [
+            "src/**/*.spec.ts",
+            "src/test.ts",
+        ],
+    ) + [
+        "//video-player:common_deps",
+        "ng-package.js",
+        "package.json",
+        "tsconfig.lib.json",
+        "tsconfig.lib.prod.json",
+        "//sdk",
+        "@npm//@angular/cli",
+        "@npm//@angular/core",
+        "@npm//@angular/common",
+        "@npm//ngx-videogular",
+        "@npm//zone.js",
+        "@npm//tslib",
+        "@npm//typescript",
+        "@npm//@angular-devkit/architect-cli",
+        "@npm//@angular-devkit/build-angular",
+        "@npm//ng-packagr"
+    ],
+    output_dir = True,
+)
+
+pkg_npm(
+    name = "video-player",
+    package_name = "@rezonence/video-player",
+    srcs = [":build"],
+)
