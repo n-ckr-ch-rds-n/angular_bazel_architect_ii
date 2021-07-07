@@ -9691,6 +9691,11 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
+ng-mocks@^11.2.3:
+  version "11.11.2"
+  resolved "https://registry.yarnpkg.com/ng-mocks/-/ng-mocks-11.11.2.tgz#5deaae4364da233a32035652f1302d4e7ba60884"
+  integrity sha512-TRcHriSjHgkKnpbK1TMpIv6qhRmif/BCRGLgZrwi8Y/7/eZrIeDQ4bqW+i9cotKxyv0bAnMuaM09t/Q5rzaKTg==
+
 ng-packagr@^11.2.4:
   version "11.2.4"
   resolved "https://registry.yarnpkg.com/ng-packagr/-/ng-packagr-11.2.4.tgz#9deda83beb831bda7b753686d0f90e12a02dbb47"

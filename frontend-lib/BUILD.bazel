@@ -68,6 +68,7 @@ architect_test(
         "@npm//karma-coverage-istanbul-reporter",
         "@npm//karma-jasmine",
         "@npm//karma-jasmine-html-reporter",
+        "@npm//ng-mocks",
         "//sdk"
     ],
     tags = [

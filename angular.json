@@ -12,7 +12,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "allowedCommonJsDependencies": ["@rezonence/sdk"],
             "tsConfig": "video-player/tsconfig.lib.json",
             "project": "video-player/ng-package.js"
           },
